@@ -4,9 +4,6 @@ import com.olexyn.min.http.server.servlets.AsyncServlet;
 import com.olexyn.min.http.server.servlets.BlockingServlet;
 
 
-/**
- * How to embed this server.
- */
 public class MainExample {
     public static void main(String... args) throws Exception {
 
@@ -20,6 +17,6 @@ public class MainExample {
         server.addServletWithMapping("/status", BlockingServlet.class);
         server.addServletWithMapping("/heavy/async", AsyncServlet.class);
 
-        new MinJettyServer().start();
+        server.start();
     }
 }
