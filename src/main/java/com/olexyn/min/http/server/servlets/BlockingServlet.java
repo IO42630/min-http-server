@@ -1,4 +1,4 @@
-package com.olexyn.mock.http.server.servlets;
+package com.olexyn.min.http.server.servlets;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
