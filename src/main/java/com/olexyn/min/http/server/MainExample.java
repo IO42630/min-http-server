@@ -5,7 +5,7 @@ import com.olexyn.min.http.server.servlets.BlockingServlet;
 
 
 public class MainExample {
-    public static void main(String... args) throws Exception {
+    public static void main(String... args) {
 
         MinJettyServer server = new MinJettyServer();
 
