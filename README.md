@@ -1,10 +1,12 @@
-### Minimal HTTP Server
-Embed by copying code in `MainExample`.
+# min-http-server
 
+- A minimal HTTP server
 
-### Hello Demo
-* Run `MainExample`.
-* Open `http://localhost:8090/status`.
+## Setup
 
-### Docker
-* See Dockerfile.
+- Run in Docker via `./run.sh`
+- Open `http://localhost:48090/status`.
+
+## Usage
+
+- Add you custom code `MainExample`.
