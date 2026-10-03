@@ -1,0 +1,6 @@
+services:
+  min-http-server:
+    build: .
+    container_name: min-http-server
+    ports:
+      - "48090:8090"
