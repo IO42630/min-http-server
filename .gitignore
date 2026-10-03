@@ -1,3 +1,7 @@
-.idea
-/target/
+/.idea/
 *.iml
+/target/
+*.env
+!template*
+/.agents/
+.DS_Store
