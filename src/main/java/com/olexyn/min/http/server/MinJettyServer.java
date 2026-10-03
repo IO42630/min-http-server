@@ -1,16 +1,12 @@
 package com.olexyn.min.http.server;
 
-import org.eclipse.jetty.security.SecurityHandler;
+import jakarta.servlet.Servlet;
+import org.eclipse.jetty.ee10.servlet.ServletContextHandler;
 import org.eclipse.jetty.server.Connector;
-import org.eclipse.jetty.server.HandlerContainer;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.ServerConnector;
-import org.eclipse.jetty.server.handler.HandlerWrapper;
-import org.eclipse.jetty.server.session.SessionHandler;
-import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.util.thread.QueuedThreadPool;
 
-import javax.servlet.Servlet;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,7 +36,7 @@ public class MinJettyServer {
         ServletContextHandler servletHandler = new ServletContextHandler();
 
         for (Map.Entry<String, Class<? extends Servlet>> entry : servletURIMapping.entrySet()) {
-            servletHandler.getServletHandler().addServletWithMapping(entry.getValue(), entry.getKey());
+            servletHandler.addServlet(entry.getValue(), entry.getKey());
         }
 
         server.setHandler(servletHandler);
